@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOXICONS-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Carte de profil responsive</title>
+  </head>
+  <body>
+
+    <!-- Bouton pour changer de thème en haut à droite de la page -->
+    <button class="theme-toggle" onclick="toggleTheme()"><i class='bx bxs-moon'></i></button>
+
+    <section class="card">
+      <!-- Banner-->
+
+      <div class="card_banner"></div>
+
+      <div class="card_profile">
+        <img src="Photo-de-profil.jpg" alt="Maphotodeprofil" class="img_profile" />
+      </div>
+
+      <div class="card_text">
+        <h1>John Doe</h1>
+        <p>Photographe</p>
+      </div>
+
+      <!-- ICONS-->
+
+      <div class="card_icons">
+        <div class="card_icons_facebook">
+          <a><i class="bx bxl-facebook"></i></a>
+        </div>
+
+        <div class="card_icons_twitter">
+          <a><i class='bx bxl-twitter' ></i></i></a>
+        </div>
+
+        <div class="card_icons_instagram">
+          <a><i class='bx bxl-instagram' ></i></a>
+        </div>
+
+        <div class="card_icons_youtube">
+          <a><i class='bx bxl-youtube' ></i></a>
+        </div>
+      </div>
+
+      <!-- BUTTON-->
+
+       <div class="card_button">
+        <button>Contact</button>
+        <button>Message</button>
+       </div>
+
+       <!--INFOS-->
+       <div class="card_infos">
+        <div class="card_infos_content">
+          <i class="bx bx-heart"></i>
+          <p>60k</p>
+        </div>
+
+        <div class="card_infos_content">
+          <i class='bx bx-message-rounded'></i>
+          <p>20k</p>
+        </div>
+
+        <div class="card_infos_content">
+          <i class='bx bx-share'></i>
+          <p>12</p>
+        </div>
+       </div>
+
+    </section>
+  </body>
+
+  <script>
+    
+    const themeToggle = document.querySelector('.theme-toggle');
+    
+    
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+    
+    
+    themeToggle.addEventListener('click', () => {
+      
+      document.body.classList.toggle('dark-mode');
+      
+      
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.removeItem('theme');
+      }
+    });
+  </script>
+  
+</html>

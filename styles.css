@@ -1,0 +1,289 @@
+/* FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.card {
+  height: 560px;
+  width: 450px;
+  max-width: 450px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card_banner {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to right, #6a1b9a, #ff4081); /* Gradient */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.card_profile {
+  border: 4px solid #331039;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  background-color: white;
+  z-index: 1;
+  transition: all 1.3s ease;
+}
+.img_profile {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.card_text {
+  margin-top: 250px;
+  text-align: center;
+  font-weight: 500px;
+}
+
+.card_text h1 {
+  margin: 8px 0;
+  color: #2c3e50;
+}
+
+.card_text p {
+  font-size: 22px;
+  margin: 0 0 30px 0;
+  color: #34495e;
+}
+
+/* ICONS */
+
+.card_icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.card_icons_facebook,
+.card_icons_twitter,
+.card_icons_instagram,
+.card_icons_youtube {
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 13px;
+}
+
+i {
+  width: 100%;
+  padding-top: 5px;
+  text-align: center;
+}
+.card_icons_facebook {
+  background-color: #3b5998;
+}
+
+.card_icons_twitter {
+  background-color: #00acee;
+}
+
+.card_icons_instagram {
+  background-color: #8a3ab9;
+}
+
+.card_icons_youtube {
+  background-color: #c4302b;
+}
+
+.card_icons i:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+/* BUTTON */
+.card_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.card_button button {
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 12px 30px;
+  background: linear-gradient(to left, #6a1b9a, #ff4081, #6a1b9a);
+  border-radius: 25px;
+  border: 1px solid transparent;
+  transition: background 0.3s ease;
+}
+
+.card_button button:hover {
+  cursor: pointer;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+/* INFOS */
+
+.card_infos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.card_infos_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  gap: 7px;
+  margin: 0;
+  font-size: 21px;
+  border-right: 3px solid #e7e7e7;
+  height: 25px;
+  padding: 0 30px;
+}
+
+.card_infos_content:last-child {
+  border-right: none;
+}
+
+/* Bouton pour basculer le thème en haut à droite de la page */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: linear-gradient(to right, #6a1b9a, #ff4081); /* Gradient */
+  color: black;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #0e4bf1;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Par défaut, on applique le mode clair */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Transition globale pour tous les éléments */
+body,
+.card,
+.theme-toggle,
+.card_icons_facebook,
+.card_icons_twitter,
+.card_icons_instagram,
+.card_icons_youtube {
+  transition: all 1.3s ease;
+}
+
+/* Mode sombre */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .card_profile {
+  border: 4px solid white; /* Bordure blanche en mode sombre */
+}
+
+.card {
+  background-color: #fff;
+  color: #333333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border 1.5s ease;
+}
+
+/* Bordure dans le mode sombre uniquement */
+body.dark-mode .card {
+  background-color: #444;
+  color: white;
+  border: 4px solid #bbb;
+}
+
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: white;
+}
+
+body.dark-mode .card_infos_content i {
+  color: white;
+}
+
+body.dark-mode .theme-toggle i.bx.bxs-moon {
+  color: white;
+}
+
+.card_icons_facebook {
+  background-color: #4267b2;
+}
+
+body.dark-mode .card_icons_facebook {
+  background-color: #29487d;
+}
+
+.card_icons_twitter {
+  background-color: #1daaf2;
+}
+
+body.dark-mode .card_icons_twitter {
+  background-color: #006db7;
+}
+
+.card_icons_instagram {
+  background-color: #e1306c;
+}
+
+body.dark-mode .card_icons_instagram {
+  background-color: #9b1e45;
+}
+
+.card_icons_youtube {
+  background-color: #ff0000;
+}
+
+body.dark-mode .card_icons_youtube {
+  background-color: #cc0000;
+}
